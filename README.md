@@ -16,7 +16,7 @@ Function g. Accepts two parameters - a vowel and a list of unique characters tha
 
 The function of the argparse module is simply to read the parameters specified when the train.py is invoked from the shell. In this case a total of 4 arguments are to be expected to be specified. 
 
-            usage: train.py [-h] [--k K] [--r R] --d D] m h
+            usage: train.py [-h] [--k K] [--r R] [--d D] m h
 
 The definition of the command-line parameters follows below:<br>
 a. Parameter --k K. Number of Hidden Units for each layer within the neural network. Optional. K must be of Integer type having a default value of 200 in case the parameter is omitted.<br>
@@ -238,3 +238,15 @@ The solution entails the development of additional modules also written in Pytho
 a. helper.py. Includes a number of commonly used routines and auditing functions. <b>
 
 b. plot.py. Includes routines to create a confusion matrix in graphical format. 
+
+
+## Architecture of Neural Network
+VowelModel( <BR>
+    (lin1): Linear(in_features=452, out_features=200, bias=True)<BR>
+    (tanh): Tanh()<BR>
+    (lin2): Linear(in_features=200, out_features=200, bias=True)<BR>
+    (sigmoid): Sigmoid()<BR>
+    (lin3): Linear(in_features=200, out_features=10, bias=True)<BR>
+    (dropout): Dropout(p=0.7, inplace=False)<BR>
+    (softmax): LogSoftmax(dim=1)<BR>
+)

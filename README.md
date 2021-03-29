@@ -6,8 +6,7 @@ Your name: Mark Grech
 ## Part 1
 The routing responsible for Model training is already complete. Explain what the functions a, b, and g do, as well as the meaning of the command-line arguments that are being processed via the argparse module.
 
-Function a. Responsible for the reading and parsing of the textfile which comprises of a list of sentences sourced from newspaper articles written in Swedish. The routine iterates over row, parses each word of each letter of each word and stores into a list data structure. 
-The function returns two lists, the first being a list of letters including non-alphanumeric characters and sentence delimiters and prefixed with two <s> tag and <e> tags. The second data structure entails of a set of unique letters that is present in the entire training corpus X.
+Function a. Responsible for the loading and parsing of a textfile which comprises of a list of sentences sourced from newspaper articles written in Swedish. The routine parses each sentence,word and letter and stores it into a list data structure. The function returns two lists, the first being a list of letters including non-alphanumeric characters and sentence delimiters and prefixed with two /<s> tag and /<e> tags. The second data structure entails of a set of unique letters that is present in the entire training corpus X.
 
 Function b. The parameters returned by previous function namely a() are both passed as function parameters u and p respectively . 
 The list of characters is parsed and consonants are excluded from further processing. In the presence of a vowel, the 2 preceeding characters and the 2 successive characters are noted as passed to function g() for further processing. Two datastructures are returned:

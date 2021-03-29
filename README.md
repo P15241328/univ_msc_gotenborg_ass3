@@ -241,12 +241,13 @@ b. plot.py. Includes routines to create a confusion matrix in graphical format.
 
 
 ## Architecture of Neural Network
-VowelModel( <BR>
-    (lin1): Linear(in_features=452, out_features=200, bias=True)<BR>
-    (tanh): Tanh()<BR>
-    (lin2): Linear(in_features=200, out_features=200, bias=True)<BR>
-    (sigmoid): Sigmoid()<BR>
-    (lin3): Linear(in_features=200, out_features=10, bias=True)<BR>
-    (dropout): Dropout(p=0.7, inplace=False)<BR>
-    (softmax): LogSoftmax(dim=1)<BR>
-)
+###  <font size="0.2">
+    VowelModel(
+    (lin1): Linear(in_features=452, out_features=200, bias=True)
+    (tanh): Tanh()
+    (lin2): Linear(in_features=200, out_features=200, bias=True)
+    (sigmoid): Sigmoid()
+    (lin3): Linear(in_features=200, out_features=10, bias=True)
+    (dropout): Dropout(p=0.7, inplace=False)
+    (softmax): LogSoftmax(dim=1))
+</font>
